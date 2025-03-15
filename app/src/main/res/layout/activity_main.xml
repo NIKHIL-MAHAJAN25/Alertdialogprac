@@ -44,4 +44,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="constraint"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_imp"
+        android:text="implicit"/>
 </LinearLayout>

@@ -17,6 +17,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.nikhil.alertdialogprac.databinding.ActivityImplicitAct2Binding
 import com.nikhil.alertdialogprac.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 
@@ -123,6 +124,9 @@ class MainActivity : AppCompatActivity() {
 
             datePickerDialog.show()
 
+        }
+        binding.btnImp.setOnClickListener {
+            startActivity(Intent(this,ImplicitAct2::class.java))
         }
 
 

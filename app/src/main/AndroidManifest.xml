@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Alertdialogprac"
         tools:targetApi="31">
         <activity
+            android:name=".ImplicitAct2"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity2"
+            android:exported="false" />
+        <activity
             android:name=".ConstraintNew"
             android:exported="false" />
         <activity

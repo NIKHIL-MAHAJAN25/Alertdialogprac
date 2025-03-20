@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSub2">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide31"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+    <EditText
+        android:id="@+id/n"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:hint="N"
+        app:layout_constraintTop_toBottomOf="@+id/guide31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/n"
+        android:text="+2"
+        app:layout_constraintTop_toBottomOf="@+id/guide31"
+        android:id="@+id/addcalc"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/n"
+        android:text="-2"
+        app:layout_constraintTop_toBottomOf="@+id/guide31"
+        android:id="@+id/subcalc"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/2"
+        app:layout_constraintBottom_toTopOf="@id/guide31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/divcalc"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*2"
+        app:layout_constraintTop_toBottomOf="@+id/n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/multcalc"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

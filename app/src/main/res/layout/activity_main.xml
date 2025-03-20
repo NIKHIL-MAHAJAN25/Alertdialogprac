@@ -49,4 +49,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_imp"
         android:text="implicit"/>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_adsub"
+        android:text="dialog add/sub"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_adsub2"
+        android:text="Add/sub2"/>
 </LinearLayout>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="open link"/>
+        android:text="Youtube"/>
     <Button
         android:id="@+id/btn_imp2"
         android:layout_width="match_parent"
@@ -23,13 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btn_imp2"
-        android:text="sms"/>
+        android:text="email"/>
     <Button
         android:id="@+id/btn_imp4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btn_imp3"
-        android:text="email"/>
+        android:text="sms"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

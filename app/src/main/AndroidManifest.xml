@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Alertdialogprac"
         tools:targetApi="31">
         <activity
+            android:name=".AddSub2"
+            android:exported="false" />
+        <activity
+            android:name=".CustomAS"
+            android:exported="false" />
+        <activity
+            android:name=".DialogActivity"
+            android:exported="false" />
+        <activity
             android:name=".ImplicitAct2"
             android:exported="false" />
         <activity
@@ -20,18 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".ConstraintNew"
-            android:exported="false" />
-        <activity
-            android:name=".Pagebind3"
-            android:exported="false" />
-        <activity
-            android:name=".Constraint"
-            android:exported="false" />
-        <activity
-            android:name=".Pagebind"
-            android:exported="false" />
-        <activity
-            android:name=".PageBind"
             android:exported="false" />
         <activity
             android:name=".pagebind"

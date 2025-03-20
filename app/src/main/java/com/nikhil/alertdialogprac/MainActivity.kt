@@ -17,6 +17,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.nikhil.alertdialogprac.databinding.ActivityCustomAsBinding
 import com.nikhil.alertdialogprac.databinding.ActivityImplicitAct2Binding
 import com.nikhil.alertdialogprac.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
@@ -24,9 +25,11 @@ import java.text.SimpleDateFormat
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     var button: Button? = null
+
     var ItemsList = arrayOf("Apple", "Banana", "cider")
     var boolArray = booleanArrayOf(true, false, true, true)
     var formatter = SimpleDateFormat("ddd-mm-yyyy")
+    var current=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -96,8 +99,6 @@ class MainActivity : AppCompatActivity() {
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
-
-
         }
         binding.btnDate.setOnClickListener {
             var calendar1 = Calendar.getInstance()
@@ -127,6 +128,12 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnImp.setOnClickListener {
             startActivity(Intent(this,ImplicitAct2::class.java))
+        }
+        binding.btnAdsub.setOnClickListener {
+            startActivity(Intent(this,DialogActivity::class.java))
+        }
+        binding.btnAdsub2.setOnClickListener {
+            startActivity(Intent(this,AddSub2::class.java))
         }
 
 

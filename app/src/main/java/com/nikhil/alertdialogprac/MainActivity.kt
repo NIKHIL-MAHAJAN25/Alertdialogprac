@@ -135,6 +135,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnAdsub2.setOnClickListener {
             startActivity(Intent(this,AddSub2::class.java))
         }
+        binding.btnSpin.setOnClickListener {
+            startActivity(Intent(this,SpinnerActivity::class.java))
+        }
+        binding.btnListview.setOnClickListener {
+            startActivity(Intent(this,LisstActivity::class.java))
+        }
 
 
 

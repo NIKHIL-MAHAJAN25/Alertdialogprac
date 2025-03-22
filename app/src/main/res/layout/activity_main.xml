@@ -60,4 +60,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_adsub2"
         android:text="Add/sub2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="spinner"
+        android:id="@+id/btn_spin"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="list view"
+        android:id="@+id/btn_Listview"/>
 </LinearLayout>

@@ -20,6 +20,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.nikhil.alertdialogprac.databinding.ActivityCustomAsBinding
 import com.nikhil.alertdialogprac.databinding.ActivityImplicitAct2Binding
 import com.nikhil.alertdialogprac.databinding.ActivityMainBinding
+import com.nikhil.alertdialogprac.listpackage.List2Activity
+import com.nikhil.alertdialogprac.recyler.RecyclerActivity
 import java.text.SimpleDateFormat
 
 class MainActivity : AppCompatActivity() {
@@ -142,7 +144,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,LisstActivity::class.java))
         }
 
-
+        binding.btnWebview.setOnClickListener {
+            startActivity(Intent(this,WebView::class.java))
+        }
+        binding.btnListwithbase.setOnClickListener {
+            startActivity(Intent(this,List2Activity::class.java))
+        }
+        binding.btnRecycler.setOnClickListener {
+            startActivity(Intent(this,RecyclerActivity::class.java))
+        }
 
     }
 

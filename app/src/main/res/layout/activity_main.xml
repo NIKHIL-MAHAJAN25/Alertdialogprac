@@ -70,4 +70,19 @@
         android:layout_height="wrap_content"
         android:text="list view"
         android:id="@+id/btn_Listview"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="web view"
+        android:id="@+id/btn_webview"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List with Base "
+        android:id="@+id/btn_listwithbase"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recycler"
+        android:id="@+id/btn_recycler"/>
 </LinearLayout>

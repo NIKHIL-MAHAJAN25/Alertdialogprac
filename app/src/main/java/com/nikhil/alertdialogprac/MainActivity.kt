@@ -21,7 +21,9 @@ import com.nikhil.alertdialogprac.databinding.ActivityCustomAsBinding
 import com.nikhil.alertdialogprac.databinding.ActivityImplicitAct2Binding
 import com.nikhil.alertdialogprac.databinding.ActivityMainBinding
 import com.nikhil.alertdialogprac.listpackage.List2Activity
+import com.nikhil.alertdialogprac.location.LocationActivity
 import com.nikhil.alertdialogprac.recyler.RecyclerActivity
+import com.nikhil.alertdialogprac.supa.Supabase
 import java.text.SimpleDateFormat
 
 class MainActivity : AppCompatActivity() {
@@ -42,9 +44,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.btnBind.setOnClickListener {
-            startActivity(Intent(this, pagebind::class.java))
-        }
+
         binding.btnConst.setOnClickListener {
             startActivity(Intent(this,ConstraintNew::class.java))
         }
@@ -153,7 +153,21 @@ class MainActivity : AppCompatActivity() {
         binding.btnRecycler.setOnClickListener {
             startActivity(Intent(this,RecyclerActivity::class.java))
         }
-
+        binding.btnLocation.setOnClickListener {
+            startActivity(Intent(this, LocationActivity::class.java))
+        }
+        binding.btnvideo.setOnClickListener {
+            startActivity(Intent(this, VideoView::class.java))
+        }
+        binding.btnvideo2.setOnClickListener {
+            startActivity(Intent(this, VideoActivity2::class.java))
+        }
+        binding.btnvideo3.setOnClickListener {
+            startActivity(Intent(this, VideoView3::class.java))
+        }
+        binding.btnsupa.setOnClickListener {
+            startActivity(Intent(this,Supabase::class.java))
+        }
     }
 
 }

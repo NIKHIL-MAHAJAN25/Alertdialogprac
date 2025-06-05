@@ -27,9 +27,7 @@ class RecyclerAdapter(var arrayList: ArrayList<student>,var listener1:Inter):Rec
         }
 
         override fun onBindViewHolder(holder: Viewholder, position: Int) {
-//        holder.name.setText(arrayList[position].name)
-//        holder.rollno.setText(arrayList[position].rollNo)
-//        holder.subject.setText(arrayList[position].subject)
+//
             holder.apply {
                 name.setText(arrayList[position].name)
                 rollno.setText(arrayList[position].rollNo)

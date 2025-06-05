@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btn_bind"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Binding" />
+        android:orientation="vertical">
+
+
 
     <Button
         android:id="@+id/btn_alert"
@@ -79,10 +79,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="List with Base "
+
         android:id="@+id/btn_listwithbase"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="recycler"
         android:id="@+id/btn_recycler"/>
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="location"
+        android:id="@+id/btn_location"/>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="videoview"
+        android:id="@+id/btnvideo"/>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="videoview2"
+        android:id="@+id/btnvideo2"/>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="videoview3"
+        android:id="@+id/btnvideo3"/>
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="supabase"
+        android:id="@+id/btnsupa"/>
+    </LinearLayout>
+</ScrollView>

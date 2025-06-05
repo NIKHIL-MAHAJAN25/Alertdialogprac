@@ -22,16 +22,20 @@ class RecyclerActivity : AppCompatActivity(),Inter {
     lateinit var binding: ActivityRecyclerBinding
     lateinit var recyclerAdapter: RecyclerAdapter
     var array = arrayListOf<student>()
+    var Noteslist = arrayListOf<User>()
+    lateinit var notesDatabase: NotesDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        notesDatabase = NotesDatabase.getInstance(this)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        notesDatabase.DAO().insertTodo(User(title = "test New", description = "C++"))
         array.add(student("Test Name", "20", "KOTLIN"))
         array.add(student("Name1", "22", "C"))
         array.add(student("New", "12", "C++"))
@@ -39,6 +43,7 @@ class RecyclerActivity : AppCompatActivity(),Inter {
         recyclerAdapter = RecyclerAdapter(array,this)
         binding.rvList.layoutManager = LinearLayoutManager(this)
         binding.rvList.adapter = recyclerAdapter
+
         binding.btnRecycleadd.setOnClickListener {
             val dialog = Dialog(this)
             val dialogBinding = ActivityRecyclerAddBinding.inflate(layoutInflater)
@@ -103,14 +108,19 @@ class RecyclerActivity : AppCompatActivity(),Inter {
 
             }
             setPositiveButton("YES") { _, _ ->
-                val deleted = array.removeAt(position)
+                notesDatabase.DAO().deleteTodoEntity(Noteslist[position])
+                getList()
                 recyclerAdapter.notifyDataSetChanged()
-                Toast.makeText(this@RecyclerActivity, "Item deleted:$deleted", Toast.LENGTH_SHORT)
+                Toast.makeText(this@RecyclerActivity, "Item deleted", Toast.LENGTH_SHORT)
                     .show()
             }
 
             setCancelable(false)
             show()
         }
+    }
+    private fun getList() {
+        Noteslist.clear()
+        Noteslist.addAll(notesDatabase.DAO().getList())
     }
 }
